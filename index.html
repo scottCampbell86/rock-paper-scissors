@@ -17,17 +17,20 @@
 <body>
 <section id= "rules">
 <h4>The Rules</h4>
-<ol>You can throw Rock, Paper, or Scissors...
-    <br>
-    <br>
-        <li>Rock</li>
-            <p>If you throw Rock: you beat Scissors, but lose to Paper</p>
-        <li>Paper</li>
-            <p>If you throw Paper: you beat Rock, but lose to Scissors</p>
-        <li>Scissors</li>
-            <p>If you throw Scissors: you beat Paper, but lose to Rock</p>
-        <p><em>OR, if you and the computer throw the same, it's a draw</em></p>
-    </ol>
+<p>You can throw Rock, Paper, or Scissors...</p>
+   
+    <em>If you throw</em><br><span class= "rPs">Rock</span>
+        <li>beat Scissors; lose to Paper</li><br>
+          
+    <em>If you throw</em><br><span class= "rPs">Paper</span>
+        <li>beat Rock; lose to Scissors</li><br>
+            
+    <em>If you throw</em><br><span class= "rPs">Scissors</span>
+        <li>beat Paper; lose to Rock</li><br>
+            
+     <em>If you throw the same as the computer</em><br><span class= "rPs"><em>Draw</em></span>
+            <li>yup, it's a draw</li>
+    
 </section>
 <br>
 <br>
@@ -50,24 +53,35 @@
 </section>
 
 <br>
-<button id="shoot-button">Shoot!</button>
-<button id="reset-button">Reset</button>
 
-<section id= "results">
-    <p id= "game-outcome"></p>
-    <p id= "draw">It's a draw</p>
-    <p id="scoreboard"><br>
-        SCOREBOARD:
-        <br>
-        You: <span id="user-wins"></span><br>
-        Computer: <span id="computer-wins"></span>
-
-    </p>
+<section>
+    <button class= "buttons" id="shoot-button">Shoot!</button>
 </section>
 
+<br>
 
+<section id= "results">
+    <p id= "report-winner">Who-won</p>
+    <p id= "report-draw">It's-a-draw</p>
+</section>
+
+<br>
+
+<section class="scoreboard">
+    <p>
+    SCOREBOARD:
+<br>
+<br>
+    You: <span id="user-wins"></span><br><br>
+    Computer: <span id="computer-wins"></span>
+    </p>
+</section>
+<section>
+    <button class= "buttons" id="reset-button">Reset</button>
+</section>
    
     <script type="module" src="app.js"></script>
+
 </body>
 
 </html>
