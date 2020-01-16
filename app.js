@@ -23,17 +23,21 @@ let loses = 0;
 let draws = 0;
 
 button.addEventListener("click", () => {
-    //console.log("button works!")
+    console.log("click heard!")
 
   //this assigns the users selection to a var 
     const userChoice = document.querySelector('input:checked');
-    //console.log (userChoice.value);
+    console.log (userChoice);
+
   //this assigns the value of the user's selections to a var  
     const userMove = userChoice.value;
     console.log(userMove)
 
   //assigns the value of randomThrow to var
     const computerMove = (randomThrow())
-     //console.log(computerMove);
-    
+     console.log(computerMove);
+  
+  //this assigns the games's outcome to a var by eval userMove and computerMove
+    const outcome = checkResult(userMove, computerMove);
+    console.log(outcome)
 });
