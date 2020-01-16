@@ -27,8 +27,8 @@
   margin-left: 50px;
 }
 
-#results {
-  opacity: 0;
+#game-results {
+  visibility: hidden;
 }
 
 .scoreboard {

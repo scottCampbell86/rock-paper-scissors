@@ -1,27 +1,23 @@
 //import checkResult from './checkResult.js';
 //import randomThrow from './randomThrow.js';
 import { randomThrow, computerThrowValue, checkResult } from './randomThrow.js';
-
-//this is assigned to the play button
 const button = document.getElementById('shoot-button');
+//const resetButton = document.getElementById('reset-button');
+const gameResults = document.getElementById('game-results');
+//onsole.log(gameResults);
+//const gameResults = document.getElementById('user-outcome');
+//const gameResults = document.getElementById('draw-outcome');
+const winsTotal = document.getElementById('win-total');
+const lossTotal = document.getElementById('loss-total');
+const drawTotal = document.getElementById('draw-total');
 
-//this is assigned to the reset game button
-const resetButton = document.getElementById('reset-button');
 
-//this will report who won
-const reportWinner = document.getElementById('report-winner');
-
-//this will report that the outcome was a draw
-const reportDraw = document.getElementById('report-draw');
-
-//these will be manipulated text content
-const userWins = document.getElementById('user-wins');
-const computerWins = document.getElementById('computer-wins');
-
+  //State declaration
 let wins = 0;
 let loses = 0;
 let draws = 0;
 
+  //Adds button to invoke defined functionality 
 button.addEventListener("click", () => {
     console.log("click heard!")
 
@@ -39,5 +35,51 @@ button.addEventListener("click", () => {
   
   //this assigns the games's outcome to a var by eval userMove and computerMove
     const outcome = checkResult(userMove, computerMove);
-    console.log(outcome)
+    console.log(outcome);
+    //return outcome;
+  
+// function to toggle visibility of result announcement
+
+let announceResult = () => {
+  
+        if (outcome === 'win') {
+            gameResults.textContent = "You Win!";
+            gameResults.style.visibility = 'visible';
+            return;
+        }  
+        if (outcome === 'lose') {
+            gameResults.textContent = "You Lose...";
+            gameResults.style.visibility = 'visible';
+            return;
+        }  
+        else {
+            gameResults.textContent = "It's a draw, try again!";
+            gameResults.style.visibility = 'visible';
+            return;
+        }
+    
+    }; 
+
+    if (outcome === 'win') {
+        wins++;
+        winsTotal.textContent = wins;
+        //gameResults.textContent = "You Win";
+        announceResult();   
+    }
+
+    if (outcome === 'lose') {
+        loses++;
+        lossTotal.textContent = loses;
+        //gameResults.textContent = "You lose";
+        announceResult(); 
+    }
+
+    if (outcome === 'draw') {
+        draws++;
+        drawTotal.textContent = draws;
+        //gameResults.textContent = "It's a draw";
+        announceResult();
+    }
 });
+
+
