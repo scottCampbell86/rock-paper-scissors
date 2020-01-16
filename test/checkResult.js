@@ -1,5 +1,3 @@
-
-
 export default function checkResult(player, computer) {
     
     if (player === computer) {
@@ -15,5 +13,5 @@ export default function checkResult(player, computer) {
         return 'win'; 
     } else {
         return 'lose';
-  }
+    }
 }
