@@ -2,12 +2,8 @@
 
 //export default 
 
-function randomThrow(){
-    const computerThrow = Math.floor(Math.random() * 3);
-    return computerThrowValue(computerThrow);
-}
-
-function computerThrowValue(num) {
+function randomThrow() {
+ Math.floor(Math.random() * 3);
     if (num === 0) {
         return 'rock';
     }
@@ -23,13 +19,13 @@ function checkResult(player, computer) {
     
     if (player === computer) {
         return 'draw';
-    };
+    }
     if (player === 'rock' && computer == 'scissors') {
         return 'win';
-    }; 
+    }
     if (player === 'paper' && computer === 'rock') {
         return 'win';
-    };
+    }
     if (player === 'scissors' && computer == 'paper') {
         return 'win'; 
     } else {
@@ -40,7 +36,6 @@ function checkResult(player, computer) {
 
 export {
     randomThrow,
-    computerThrowValue,
     checkResult
 }
 

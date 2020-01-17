@@ -1,6 +1,6 @@
 //import checkResult from './checkResult.js';
 //import randomThrow from './randomThrow.js';
-import { randomThrow, computerThrowValue, checkResult } from './randomThrow.js';
+import { randomThrow, checkResult } from './randomThrow.js';
 const button = document.getElementById('shoot-button');
 const resetButton = document.getElementById('reset-button');
 const gameResults = document.getElementById('game-results');
@@ -90,7 +90,7 @@ resetButton.addEventListener("click", () => {
     winsTotal.textContent = wins;
     lossTotal.textContent = loses;
     drawTotal.textContent = draws;
-    gameResults.style.visibily = "hidden";
+    gameResults.style.visibility = 'hidden';
 
 });
 
