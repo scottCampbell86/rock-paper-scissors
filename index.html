@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="style.css">
+    <title>Rock, Paper, Scissors</title>
+</head>
+
+<body>
+<header>
+    <h1>Rock, Paper, Scissors!</h1>
+</header>
+
+<section id="rules">
+<h3><bold><span id="rule-heading">The Rules</span></bold></h3>
+    <p id="rules-intro">You can throw Rock, Paper, or Scissors...</p>
+   
+    <em>If you throw</em><br><span class="rPs">Rock</span>
+        <li>beat Scissors; lose to Paper</li><br>
+          
+    <em>If you throw</em><br><span class="rPs">Paper</span>
+        <li>beat Rock; lose to Scissors</li><br>
+            
+    <em>If you throw</em><br><span class="rPs">Scissors</span>
+        <li>beat Paper; lose to Rock</li><br>
+            
+     <em>If you throw the same as the computer</em><br><span class="rPs"><em>Draw</em></span>
+            <li>yup, it's a draw</li>
+    
+</section>
+
+
+<section id="radio">
+    <label>Rock
+        <input type="radio" name="select" value="rock" checked>
+    </label>
+
+    <label>Paper
+        <input type="radio" name="select" value="paper">
+    </label>
+
+    <label>Scissors
+        <input type="radio" name="select" value="scissors">
+    </label>
+<br>
+<br>
+    <button class="buttons" id="shoot-button">Shoot!</button>
+</section>
+
+<section class="scoreboard" id="scoreboard">
+    <p>
+    SCOREBOARD:
+<br>
+<br>
+    Wins: <span id="win-total"></span><br><br>
+    Loses: <span id="loss-total"></span><br><br>
+    Draws: <span id="draw-total"></span>
+    </p>
+</section>
+
+<section id="game-results-section">
+        <p id="game-results">User-Outcome</p>
+</section>
+
+<section id="reset-button-section">
+    <button class="buttons" id="reset-button">Reset</button>
+</section>
+   
+    <script type="module" src="app.js"></script>
+
+</body>
+</html>
