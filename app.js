@@ -2,7 +2,7 @@
 //import randomThrow from './randomThrow.js';
 import { randomThrow, computerThrowValue, checkResult } from './randomThrow.js';
 const button = document.getElementById('shoot-button');
-//const resetButton = document.getElementById('reset-button');
+const resetButton = document.getElementById('reset-button');
 const gameResults = document.getElementById('game-results');
 //onsole.log(gameResults);
 //const gameResults = document.getElementById('user-outcome');
@@ -82,4 +82,15 @@ let announceResult = () => {
     }
 });
 
+resetButton.addEventListener("click", () => {
+    console.log("click heard!")
+    wins = 0;
+    loses = 0;
+    draws = 0;
+    winsTotal.textContent = wins;
+    lossTotal.textContent = loses;
+    drawTotal.textContent = draws;
+    gameResults.style.visibily = "hidden";
+
+});
 
