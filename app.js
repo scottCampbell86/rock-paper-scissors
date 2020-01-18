@@ -1,17 +1,13 @@
-<<<<<<< HEAD
-//import checkResult from './checkResult.js';
-//import randomThrow from './randomThrow.js';
-import { randomThrow, checkResult } from './randomThrow.js';
-=======
 import { randomThrow, checkResult } from './randomThrow.js';
 
->>>>>>> b36fab6c3495152870452d655f652cd60d97815d
+
 const button = document.getElementById('shoot-button');
 const resetButton = document.getElementById('reset-button');
 const gameResults = document.getElementById('game-results');
 const winsTotal = document.getElementById('win-total');
 const lossTotal = document.getElementById('loss-total');
 const drawTotal = document.getElementById('draw-total');
+const computerThrew = document.getElementById('computer-threw');
 
 
 //State declaration
@@ -20,7 +16,7 @@ let loses = 0;
 let draws = 0;
 
 function playGame() {
-  console.log("click heard!")
+    console.log("click heard!")
 
   //this assigns the users selection to a var 
     const userChoice = document.querySelector('input:checked');
@@ -37,10 +33,13 @@ function playGame() {
 // function to toggle visibility of result announcement
 
     let announceResult = () => {
-        if (outcome === 'win') gameResults.textContent = 'You Win!';
-        else if (outcome === 'lose') gameResults.textContent = 'You Lose...';
+        computerThrew.textContent = `Computer threw ${ computerMove }`;
+        if (outcome === 'win') gameResults.textContent = 'You Win! :)';
+        else if (outcome === 'lose')gameResults.textContent = 'You Lose... :(';
         else gameResults.textContent = 'It\'s a draw, try again!';
         gameResults.style.display = 'inherit';
+        computerThrew.style.display = 'inherit';
+        resetButton.style.display = 'inherit';
     }; 
 
     if (outcome === 'win') {
@@ -67,11 +66,7 @@ resetButton.addEventListener('click', () => {
     winsTotal.textContent = wins;
     lossTotal.textContent = loses;
     drawTotal.textContent = draws;
-<<<<<<< HEAD
-    gameResults.style.visibility = 'hidden';
-
-=======
     gameResults.style.display = 'none';
->>>>>>> b36fab6c3495152870452d655f652cd60d97815d
+    computerThrew.style.display = 'none';
+    resetButton.style.display = 'none';
 });
-
