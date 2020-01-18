@@ -32,8 +32,8 @@ function playGame() {
 // function to toggle visibility of result announcement
 
     let announceResult = () => {
-        if (outcome === 'win') gameResults.textContent = 'You Win!';
-        else if (outcome === 'lose') gameResults.textContent = 'You Lose...';
+        if (outcome === 'win') gameResults.textContent = 'You Win! :)';
+        else if (outcome === 'lose') gameResults.textContent = 'You Lose... :(';
         else gameResults.textContent = 'It\'s a draw, try again!';
         gameResults.style.display = 'inherit';
     }; 
@@ -64,4 +64,3 @@ resetButton.addEventListener('click', () => {
     drawTotal.textContent = draws;
     gameResults.style.display = 'none';
 });
-

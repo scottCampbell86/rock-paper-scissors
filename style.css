@@ -7,7 +7,8 @@
   color: whitesmoke;
   border-radius: 50px;
   text-align: center;
-  font-size: 16px;
+  font-size: 20px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 section { 
@@ -21,6 +22,7 @@ header {
   width: 400px;
   padding: 5px;
   background-color: brown;
+  color: thistle; 
   border-radius: 50px;
   opacity: .8;
 }
@@ -38,12 +40,15 @@ header {
 
 #rules {
   text-align: center;
-  font-size:15px;
+  font-size:18px;
+  font-weight: 400;
   margin: 0 auto;
-  width: 400px;
-  background: black;
+  width: 375px;
+  background-color: teal;
+  color: lightcoral;
   border-radius: 50px;
-  opacity: .8;
+  opacity: .9;
+  display: inline-block;
 }
 
 #rules-intro {
@@ -62,41 +67,54 @@ header {
   margin: 0 auto;
   width: 400px;
   opacity: .9;
-  color: purple;
+  color: yellow;
   font-size: 21px;
   font-weight: 900;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 #game-results {
   display: none;
   margin: 0 auto;
-  width: 400px;
+  width: 200px;
+  color: palevioletred;
   background: blue;  
-  font-size: 30px;
-  border-radius: 50px;
+  font-size: 25px;
+  border-radius: 200px;
   text-align: center;
+  height: 200px;
   opacity: .75;
+  padding-top: 75px;
+  font-weight: 800;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 .scoreboard {
   text-align: center;
-  margin-bottom: 50px:
 }
 
 #scoreboard {
-  background: red;
+  background: orchid;
+  color: wheat;
   font-weight: 600;
-  margin: 0 auto;
-  width: 400px;
-  opacity: .84;
-  font-size: 20px;
+  display: inline-block;
+  float: right;
+  width: 300px;
+  opacity: .8;
+  font-size: 25px;
   border-radius: 50px;
   text-align: center;
+  font-family: Georgia, 'Times New Roman', Times, serif;
 }
 
-#reset-button-section {
-  text-align: center;
-  margin: 20px;
+#reset-button {
+  background-color: salmon;
+  height: 60px;
+  color: greenyellow;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  padding: 15px;
+  font-weight: 800;
+  opacity: .9;
 }
 
 body {
@@ -110,4 +128,10 @@ body {
 
 li {
   list-style-type: none;
+}
+
+#shoot-button {
+  background: red;
+  height: 50px;
+  color: whitesmoke;
 }
