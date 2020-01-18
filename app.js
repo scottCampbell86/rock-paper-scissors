@@ -7,6 +7,7 @@ const gameResults = document.getElementById('game-results');
 const winsTotal = document.getElementById('win-total');
 const lossTotal = document.getElementById('loss-total');
 const drawTotal = document.getElementById('draw-total');
+const computerThrew = document.getElementById('computer-threw');
 
 
 //State declaration
@@ -15,7 +16,7 @@ let loses = 0;
 let draws = 0;
 
 function playGame() {
-  console.log("click heard!")
+    console.log("click heard!")
 
   //this assigns the users selection to a var 
     const userChoice = document.querySelector('input:checked');
@@ -32,10 +33,13 @@ function playGame() {
 // function to toggle visibility of result announcement
 
     let announceResult = () => {
+        computerThrew.textContent = `Computer threw ${ computerMove }`;
         if (outcome === 'win') gameResults.textContent = 'You Win! :)';
-        else if (outcome === 'lose') gameResults.textContent = 'You Lose... :(';
+        else if (outcome === 'lose')gameResults.textContent = 'You Lose... :(';
         else gameResults.textContent = 'It\'s a draw, try again!';
         gameResults.style.display = 'inherit';
+        computerThrew.style.display = 'inherit';
+        resetButton.style.display = 'inherit';
     }; 
 
     if (outcome === 'win') {
@@ -63,4 +67,6 @@ resetButton.addEventListener('click', () => {
     lossTotal.textContent = loses;
     drawTotal.textContent = draws;
     gameResults.style.display = 'none';
+    computerThrew.style.display = 'none';
+    resetButton.style.display = 'none';
 });

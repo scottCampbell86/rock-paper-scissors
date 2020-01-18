@@ -41,13 +41,13 @@ header {
 #rules {
   text-align: center;
   font-size:18px;
-  font-weight: 400;
+  font-weight: 500;
   margin: 0 auto;
   width: 375px;
   background-color: teal;
   color: lightcoral;
   border-radius: 50px;
-  opacity: .9;
+  opacity: .95;
   display: inline-block;
 }
 
@@ -71,6 +71,24 @@ header {
   font-size: 21px;
   font-weight: 900;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+#computer-threw {
+  display: none;
+  margin: 0 auto;
+  float: left;
+  width: 175px;
+  color: lightskyblue;
+  background:tomato;  
+  font-size: 25px;
+  border-radius: 175px;
+  text-align: center;
+  height: 175px;
+  opacity: .8;
+  padding-top: 50px;
+  font-weight: 700;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-style: italic;
 }
 
 #game-results {
@@ -108,13 +126,18 @@ header {
 }
 
 #reset-button {
+  display: none;
   background-color: salmon;
-  height: 60px;
+  height: 70px;
   color: greenyellow;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   padding: 15px;
   font-weight: 800;
   opacity: .9;
+  float: right;
+  font-style: italic;
+  margin-right: 600px;
+  margin-top: 0px;
 }
 
 body {
